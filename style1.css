@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Rock Salt", cursive;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* cabecario */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    height: 86px;
+    color: white;
+    padding: 1rem 3rem;
+
+    img {
+        height: 90px;
+    }
+}
+
+/* fim cabecario */
+
+/* video */
+
+.video {
+    margin-bottom: 50px;
+}
+
+#video-fundo {
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+/* fim video */
+
+/* história */
+
+.historia {
+    font-size: 20px;
+    padding: 2em;
+    margin: 1em 0;
+
+    @media (max-width: 800px) {
+        text-align: center;
+    }
+
+    p {
+        @media (max-width: 550px) {
+            font-size: 15px;
+        }
+    }
+
+    .titulo {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: rgb(255, 125, 32)
+    }
+}
+
+/* fim história */
+
+/* membros */
+
+.cbjr {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.cbjr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/rosto.jpg') no-repeat center center/cover;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+.text1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.text1 h1 {
+    font-size: 3rem;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+@media (max-width: 750px) {
+    .text1 h1 {
+        font-size: 30px;
+    }
+}
+
+.text1 p {
+    margin-bottom: 20px;
+}
+
+.image {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.tudo {
+    position: relative;
+    height: 700px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    @media (max-width: 732px) {
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+
+.tudo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/fotos.jpeg') no-repeat center center/cover;
+    filter: grayscale(100%);
+    z-index: -1;
+
+    
+}
+
+
+.tudo li {
+    color: #ffffff;
+    font-size: 30px;
+    margin-right: 20px;
+    list-style-type: none;
+}
+
+@media (max-width: 1000px) {
+    .tudo li {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 950px) {
+    .tudo li {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 732px) {
+    .tudo li {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .tudo li {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+.tudo img {
+    margin-right: 20px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 1;
+}
+
+@media (max-width: 1100px) {
+    .tudo img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 950px) {
+    .tudo img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 732px) {
+    .tudo img {
+        display: none;
+    }
+}
+/* fim da seção de destaques */
+
+/* albuns */
+
+.grade-albuns {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 4rem;
+    justify-content: center;
+    margin: 2rem 0;
+
+@media (max-width:1330px) {
+        grid-template-columns: repeat(2, 400px);
+        gap: 4rem;
+    }
+
+
+@media (max-width: 950px) {
+        grid-template-columns: repeat(1, 400px);
+    }
+}
+
+.album {
+    background-color: rgb(28, 28, 28);
+    padding: 0.5rem;
+    text-align: center;
+    width: 400px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+    
+}
+
+.album:hover {
+    transform: scale(1.04);
+}
+
+@media (max-width: 500px) {
+    .album {
+        height: 420px;
+        width: 100%;
+    }
+}
+
+.album h2 {
+    font-size: 25px;
+    margin: 0.5rem 0;
+    color: rgb(255, 125, 32);
+}
+
+@media (max-width: 950px) {
+    .album h2 {
+        font-size: 20px;
+    }
+}
+
+.album img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 500px) {
+    .album img {
+        height: 300px;
+    }
+}
+
+.albuns {
+    text-align: center;
+    color: rgb(255, 125, 32);
+    font-size: 2rem;
+}
+
+/* fim albuns */
+
+/* inicio footer */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+
+    @media (max-width: 500px) {
+        font-size: 12px;
+    }
+}
+
+.sociais {
+    a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 0.5em;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* fim footer */
